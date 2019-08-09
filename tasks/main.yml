@@ -41,8 +41,6 @@
       - "docker"
   with_items: "{{ docker_users }}"
 
-- name: debug uname
-  debug: var=
 - name: Install latest version of docker-compose
   become: true
   get_url:
