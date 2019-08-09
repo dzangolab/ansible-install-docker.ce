@@ -47,5 +47,7 @@
   when: docker_compose
 
 - name: Make docker-compose executable
-  shell: "chmod +x /usr/local/bin/docker-compose"
+  file:
+    path: "/usr/local/bin/docker-compose"
+    mode: "+x"
   when: docker_compose
