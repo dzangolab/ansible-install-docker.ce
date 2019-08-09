@@ -30,7 +30,7 @@
     pkg: "{{ item }}"
     state: latest
     update_cache: yes
-  wit_items:
+  with_items:
     - "docker-ce"
     - "docker-ce-cli"
     - "containerd.io"
