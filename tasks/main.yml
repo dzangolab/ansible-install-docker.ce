@@ -41,11 +41,13 @@
       - "docker"
   with_items: "{{ docker_users }}"
 
+- name: debug uname
+  debug: var=
 - name: Install latest version of docker-compose
   become: true
   get_url:
-    url: https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-$(uname -s)-$(uname -m)
-    dest: /usr/local/bin/docker-compose
-    owner: root
+    url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
+    dest: "/usr/local/bin/docker-compose"
+    owner: "root"
     mode: "+x"
   when: docker_compose
