@@ -2,7 +2,7 @@ galaxy_info:
   role_name: install_docker_ce
   author: Olivier Pichon <op@dzango.com>
   description: Install Docker CE
-  company: United Asian Management Limited
+  company: Dzango Technologies Limited
 
   license: MIT
 
@@ -11,10 +11,10 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - 19.04
-        - 18.10
-        - 18.04
-        - 16.04
+        - Bionic
+        - Cosmic
+        - Disco
+        - Xenial
 
   galaxy_tags:
     - docker
