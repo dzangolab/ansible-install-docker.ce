@@ -39,7 +39,8 @@
   become: true
   user:
     name: "{{ item }}"
-    groups: "docker"
+    groups:
+      - "docker"
   with_items: "{{ docker_users }}"
 
 - name: Install latest version of docker-compose
