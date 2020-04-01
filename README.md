@@ -18,7 +18,7 @@ Ansible variables are listed below with their default values.
 
 ```
 docker_key_url: https://download.docker.com/linux/ubuntu/gpg
-docker-users:
+docker_users:
   - "{{ ansible_ssh_user }}"
 ```
 
