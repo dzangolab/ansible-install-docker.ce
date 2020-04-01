@@ -39,6 +39,7 @@
     name: "{{ item }}"
     groups:
       - "docker"
+    append: yes
   with_items: "{{ docker_users }}"
 
 - name: Install latest version of docker-compose
